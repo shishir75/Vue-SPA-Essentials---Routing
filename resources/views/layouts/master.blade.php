@@ -10,9 +10,6 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="/css/app.css">
 
-        <script src="https://unpkg.com/vue/dist/vue.js"></script>
-        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-
     </head>
 
     <body>
@@ -20,6 +17,7 @@
         <div id="app">
 
             <router-link to="/">Home</router-link>
+            <router-link to="/about">About</router-link>
 
         </div>
 
