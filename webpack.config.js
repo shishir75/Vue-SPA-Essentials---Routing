@@ -5,7 +5,7 @@
  */
 let mix = require('../src/index');
 
-let ComponentFactory = require('../src/components/ComponentFactory');
+let ComponentFactory = require('../src/views/ComponentFactory');
 
 new ComponentFactory().installAll();
 
