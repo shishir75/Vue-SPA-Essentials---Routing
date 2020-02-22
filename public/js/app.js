@@ -1918,6 +1918,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'About'
 });
@@ -1943,6 +1949,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Contact'
 });
@@ -1958,6 +1969,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2464,7 +2480,29 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("Vue Router About Page")])])
+    return _c("div", [
+      _c("article", { staticClass: "message is-primary" }, [
+        _c("div", { staticClass: "message-header" }, [
+          _c("p", [_vm._v("About")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "message-body" }, [
+          _vm._v(
+            "\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+          ),
+          _c("strong", [_vm._v("Pellentesque risus mi")]),
+          _vm._v(
+            ", tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum "
+          ),
+          _c("a", [_vm._v("felis venenatis")]),
+          _vm._v(" efficitur. Aenean ac "),
+          _c("em", [_vm._v("eleifend lacus")]),
+          _vm._v(
+            ", in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.\n        "
+          )
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -2495,7 +2533,29 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("Vue Router Contact Page")])])
+    return _c("div", [
+      _c("article", { staticClass: "message is-success" }, [
+        _c("div", { staticClass: "message-header" }, [
+          _c("p", [_vm._v("Contact")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "message-body" }, [
+          _vm._v(
+            "\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+          ),
+          _c("strong", [_vm._v("Pellentesque risus mi")]),
+          _vm._v(
+            ", tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum "
+          ),
+          _c("a", [_vm._v("felis venenatis")]),
+          _vm._v(" efficitur. Aenean ac "),
+          _c("em", [_vm._v("eleifend lacus")]),
+          _vm._v(
+            ", in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.\n        "
+          )
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -2526,7 +2586,29 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("Vue Router Home Page")])])
+    return _c("div", { staticClass: "article" }, [
+      _c("article", { staticClass: "message is-dark" }, [
+        _c("div", { staticClass: "message-header" }, [
+          _c("p", [_vm._v("Home")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "message-body" }, [
+          _vm._v(
+            "\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+          ),
+          _c("strong", [_vm._v("Pellentesque risus mi")]),
+          _vm._v(
+            ", tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum "
+          ),
+          _c("a", [_vm._v("felis venenatis")]),
+          _vm._v(" efficitur. Aenean ac "),
+          _c("em", [_vm._v("eleifend lacus")]),
+          _vm._v(
+            ", in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.\n        "
+          )
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
