@@ -1,21 +1,36 @@
 <template>
-    <div class="article">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <div class="message" v-for="status in statuses" :key="status.id">
+                    <div class="message-header">
+                        <p>{{ status.user.name }} said .....</p>
+                        <p>A Moment ago .....</p>
+                    </div>
 
-        <article class="message is-dark">
-            <div class="message-header">
-                <p>Home</p>
-            </div>
-            <div class="message-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-            </div>
-        </article>
+                    <div class="message-body" v-text="status.body"></div>
 
+                </div>
+            </div>
+        </div>
     </div>
 
 </template>
 <script>
     export default {
-        name: 'Home'
+        name: 'Home',
+
+        data() {
+            return {
+                statuses: [],
+            }
+        },
+
+        created() {
+            // fire an ajax request
+            axios.get('/statuses')
+                .then(response => this.statuses = response.data)
+        }
 
     }
 </script>

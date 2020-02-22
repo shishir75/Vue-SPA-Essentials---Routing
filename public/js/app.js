@@ -1984,8 +1984,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Home'
+  name: 'Home',
+  data: function data() {
+    return {
+      statuses: []
+    };
+  },
+  created: function created() {
+    var _this = this;
+
+    // fire an ajax request
+    axios.get('/statuses').then(function (response) {
+      return _this.statuses = response.data;
+    });
+  }
 });
 
 /***/ }),
@@ -2579,38 +2595,31 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "article" }, [
-      _c("article", { staticClass: "message is-dark" }, [
-        _c("div", { staticClass: "message-header" }, [
-          _c("p", [_vm._v("Home")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "message-body" }, [
-          _vm._v(
-            "\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-          ),
-          _c("strong", [_vm._v("Pellentesque risus mi")]),
-          _vm._v(
-            ", tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum "
-          ),
-          _c("a", [_vm._v("felis venenatis")]),
-          _vm._v(" efficitur. Aenean ac "),
-          _c("em", [_vm._v("eleifend lacus")]),
-          _vm._v(
-            ", in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.\n        "
-          )
-        ])
-      ])
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "columns" }, [
+      _c(
+        "div",
+        { staticClass: "column" },
+        _vm._l(_vm.statuses, function(status) {
+          return _c("div", { key: status.id, staticClass: "message" }, [
+            _c("div", { staticClass: "message-header" }, [
+              _c("p", [_vm._v(_vm._s(status.user.name) + " said .....")]),
+              _vm._v(" "),
+              _c("p", [_vm._v("A Moment ago .....")])
+            ]),
+            _vm._v(" "),
+            _c("div", {
+              staticClass: "message-body",
+              domProps: { textContent: _vm._s(status.body) }
+            })
+          ])
+        }),
+        0
+      )
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
