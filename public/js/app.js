@@ -1917,7 +1917,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'About'
+});
 
 /***/ }),
 
@@ -1939,7 +1941,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'Home'
+});
 
 /***/ }),
 
@@ -2433,7 +2438,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("Vue Router Demo App")])])
+    return _c("div", [_c("h1", [_vm._v("Vue Router About Page")])])
   }
 ]
 render._withStripped = true
@@ -2464,7 +2469,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("Vue Router Demo App")])])
+    return _c("div", [_c("h1", [_vm._v("Vue Router Home Page")])])
   }
 ]
 render._withStripped = true
@@ -17537,7 +17542,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./routes */ "./resources/js/routes.js");
 
 
-new Vue({
+var app = new Vue({
   el: '#app',
   router: _routes__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
@@ -17593,10 +17598,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
     component: _views_About__WEBPACK_IMPORTED_MODULE_2__["default"]
   }]
 });
-/* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
-  mode: 'history',
-  router: router
-}));
+/* harmony default export */ __webpack_exports__["default"] = (router);
 
 /***/ }),
 

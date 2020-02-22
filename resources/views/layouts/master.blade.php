@@ -16,8 +16,11 @@
 
         <div id="app">
 
-            <router-link to="/">Home</router-link>
+            <router-link to="/" exact>Home</router-link>
             <router-link to="/about">About</router-link>
+
+
+            @yield('content')
 
         </div>
 
