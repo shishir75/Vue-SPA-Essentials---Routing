@@ -8,19 +8,23 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
         <link rel="stylesheet" href="/css/app.css">
 
     </head>
 
     <body>
-
         <div id="app">
 
-            <router-link to="/" exact>Home</router-link>
-            <router-link to="/about">About</router-link>
+            @include('layouts.header')
+
+            <section class="section">
+                <div class="container">
+                    @yield('content')
+                </div>
+            </section>
 
 
-            @yield('content')
 
         </div>
 

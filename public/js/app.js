@@ -1917,6 +1917,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'About'
 });
@@ -17596,7 +17597,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
     path: '/about',
     name: 'about',
     component: _views_About__WEBPACK_IMPORTED_MODULE_2__["default"]
-  }]
+  }],
+  linkActiveClass: 'is-active'
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);
 

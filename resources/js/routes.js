@@ -20,6 +20,10 @@ const router = new VueRouter({
             component: About
         }
     ],
+
+    linkActiveClass: 'is-active'
+
+
 });
 
 
