@@ -1989,6 +1989,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Home',
@@ -1997,6 +1998,14 @@ __webpack_require__.r(__webpack_exports__);
       statuses: []
     };
   },
+  filters: {
+    ago: function ago(date) {
+      return moment__WEBPACK_IMPORTED_MODULE_0___default()(date).fromNow();
+    },
+    capitalize: function capitalize(value) {
+      return value.toUpperCase();
+    }
+  },
   created: function created() {
     var _this = this;
 
@@ -2004,11 +2013,6 @@ __webpack_require__.r(__webpack_exports__);
     axios.get('/statuses').then(function (response) {
       return _this.statuses = response.data;
     });
-  },
-  methods: {
-    postedOn: function postedOn(status) {
-      return moment__WEBPACK_IMPORTED_MODULE_0___default()(status.created_at).fromNow();
-    }
   }
 });
 
@@ -20218,7 +20222,11 @@ var render = function() {
             _c("div", { staticClass: "message-header" }, [
               _c("p", [_vm._v(_vm._s(status.user.name) + " said .....")]),
               _vm._v(" "),
-              _c("p", [_vm._v(_vm._s(_vm.postedOn(status)))])
+              _c("p", [
+                _vm._v(
+                  _vm._s(_vm._f("capitalize")(_vm._f("ago")(status.created_at)))
+                )
+              ])
             ]),
             _vm._v(" "),
             _c("div", {
